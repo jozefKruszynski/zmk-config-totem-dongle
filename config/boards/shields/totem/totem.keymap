@@ -24,8 +24,8 @@
 / {
         keymap {
                 compatible = "zmk,keymap";
-                base_layer {
-                bindings = <
+                default_layer {
+                        bindings = <
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
                 &mt LCTRL A &mt LALT R  &mt LGUI S  &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RGUI  E &mt RALT I  &mt RCTRL O
     &kp Z       &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp FSLH
