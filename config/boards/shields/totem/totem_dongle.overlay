@@ -11,10 +11,17 @@
     // zmk,kscan = &mock_kscan;
 };
 
+&zephyr_udc0 {
+    snippet_studio_rpc_usb_uart: snippet_studio_rpc_usb_uart {
+        compatible = "zephyr,cdc-acm-uart";
+    };
+};
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
+        zmk,studio-rpc-uart = &snippet_studio_rpc_usb_uart;
     };
 
     default_transform: keymap_transform_0 {
