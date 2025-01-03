@@ -22,6 +22,17 @@
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
         zmk,studio-rpc-uart = &snippet_studio_rpc_usb_uart;
+        zmk,battery = &xiao_battery_voltage_divider;
+    };
+
+    xiao_battery_voltage_divider: vbatt {
+        status = "okay";
+        compatible = "zmk,battery-voltage-divider";
+        label = "XIAO voltage divider";
+        io-channels = <&adc 7>;
+        output-ohms = <470000>;
+        full-ohms =  <1470000>;
+        power-gpios = <&gpio0 14 (GPIO_ACTIVE_LOW)>;
     };
 
     default_transform: keymap_transform_0 {
