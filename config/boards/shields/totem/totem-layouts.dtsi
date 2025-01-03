@@ -5,9 +5,8 @@
 / {
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
-        display-name = "LAYOUT";
+        display-name = "totem-layout";
 
-        kscan = <&kscan0>;
         transform = <&matrix_transform0>;
 
         keys  //                     w   h    x    y     rot    rx    ry
